@@ -11,7 +11,8 @@
   "license": "ISC",
   "keywords": [],
   "dependencies": {
-    "mojang-api": "0.0.2"
+    "mojang-api": "0.0.2",
+    "an-array-of-english-words": "^2.0.0"
   },
   "devDependencies": {
     "an-array-of-english-words": "^2.0.0",
