@@ -1,6 +1,27 @@
 const MojangAPI = require('mojang-api')
 var words = require('an-array-of-english-words')
 
+MojangAPI.prototype.nameToUuid = function(names, cb) {
+    var nameArray;
+
+    if (names instanceof Array)
+        nameArray = names;
+    else if (typeof names === "string")
+        nameArray = [names];
+    else
+        throw new Error('names is not a string or Array');
+
+    if (typeof cb !== "function")
+        throw new Error('callback was not a function');
+
+    request.post('https://api.mojang.com/profiles/minecraft', { json: true, body: nameArray }, function(err, res, body) {
+        if (body.error)
+            return cb(new Error(body.error + ": " + body.errorMessage), null);
+
+        cb(null, body);
+    });
+};
+
 const timeBetweenRows = 1001
 const wordsPerRow = 1
 
