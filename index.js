@@ -36,7 +36,7 @@ function forEachSplit() {
         word++;
         if (word >= splitWords[splitCounter].length) {
             splitCounter++;
-            fs.write("Data\\Progress.txt", splitCounter, function (err, file) {
+            fs.writeFile("Data\\Progress.txt", splitCounter, function (err, file) {
                 if (err) throw err;
             })
             console.log("Progress: " + splitCounter + "/" + splitWords.length + " Found " + validNames.length + " possible names")
