@@ -1,0 +1,19 @@
+{
+  "name": "og-name-searcher",
+  "version": "1.0.0",
+  "description": "Searchs for og names",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Noé Lopez",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "mojang-api": "0.0.2"
+  },
+  "devDependencies": {
+    "an-array-of-english-words": "^2.0.0",
+    "random-words": "^1.1.1"
+  }
+}
