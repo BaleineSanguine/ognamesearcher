@@ -1,4 +1,4 @@
-const MojangAPI = require('mojang-api')
+var MojangAPI = require('mojang-api')
 var words = require('an-array-of-english-words')
 
 MojangAPI.prototype.nameToUuid = function(names, cb) {
